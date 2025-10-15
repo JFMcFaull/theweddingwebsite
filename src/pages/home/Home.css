@@ -1,0 +1,87 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.firstcontainer {
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;      
+  height: 100vh;   
+  text-align: center;     
+}
+
+
+.secondcontainer {
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;      
+  height: 100vh;   
+  text-align: center;     
+}
+
+
+.thirdcontainer {
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;      
+  height: 100vh;   
+  text-align: center;     
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0  ;
+}
+
+section {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero section (top) */
+.hero {
+  background: url('/your-image.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+    min-height: 80vh !important;
+}
+
+/* Optional overlay for contrast */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Make sure text appears above overlay */
+.hero .titlecontainer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Second section */
+.ourstory {
+  background-color: #f9f9f9;
+  color: #222;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.ourstory h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
