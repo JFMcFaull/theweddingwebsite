@@ -1,41 +1,55 @@
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
-  height: 20vh;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
-  padding: 0 2rem;
+  gap: 40px;
+  padding: 12px 24px;
+  transition: color 0.9s ease, color 0.8s ease; /* 🔹 smooth color transition */
 }
 
-/* Logo */
-.logo {
-  width: 5rem;
-  height: auto;
+.header-light {
+  color: #323F2F;
+}
+
+.header-dark {
   color: #EEE5D5;
 }
 
-.logo:hover {
-  color: #FF5733;
+.nav-left ul,
+.nav-right ul {
+  list-style: none; 
+  margin: 0;         
+  padding: 0;        
+  display: flex;     
+  gap: 20px;        
 }
 
-/* Navigation lists */
-nav ul, .nav-left ul, .nav-right ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
+.nav-left li,
+.nav-right li {
   margin: 0;
   padding: 0;
 }
 
-nav a {
-  color: #EEE5D5;
+.nav-left a,
+.nav-right a {
   text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #FF5733;
+.header-light a {
+  color: #323F2F;
 }
 
+.header-dark a {
+  color: #EEE5D5;
+}
+
+.logo {
+  height: 4rem;
+  width: auto;
+}

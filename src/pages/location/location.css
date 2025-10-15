@@ -1,0 +1,7 @@
+.first {
+  height: 90vh; /* ensures the section takes full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* text color over video */
+}

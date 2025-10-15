@@ -1,5 +1,7 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
+import Location from "./pages/location/location";
 import Header from "./header";
 import { useEffect } from "react";
 
@@ -32,6 +34,7 @@ function App() {
   <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/location" element={<Location />} />
       </Routes>
     </BrowserRouter>
   );

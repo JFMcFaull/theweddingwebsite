@@ -36,8 +36,7 @@ html, body {
 
 h1 {
   font-size: 3rem;
-  margin: 0.5rem 0;
-  font-weight: 300;
+  font-weight: 100;
   margin-top: 0;
   margin-bottom: 0  ;
 }
@@ -50,33 +49,11 @@ section {
   align-items: center;
 }
 
-/* Hero section (top) */
-.hero {
-  background: url('/your-image.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-    min-height: 80vh !important;
-}
-
-/* Optional overlay for contrast */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-}
-
-/* Make sure text appears above overlay */
-.hero .titlecontainer {
-  position: relative;
-  z-index: 1;
-}
 
 /* Second section */
-.ourstory {
-  background-color: #f9f9f9;
-  color: #222;
+.second {
+  background-color: #EEE5D5;;
+  color: #323F2F;
   text-align: center;
   padding: 4rem 2rem;
 }

@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import "../header.css";
 
 export default function Logo({ className, color = 'black' }) {
@@ -22,6 +24,11 @@ export default function Logo({ className, color = 'black' }) {
             <path d="M582.836,-66.288C602.493,-66.288 556.575,-25.591 551.967,-34.498C547.36,-43.406 538.453,-49.549 525.245,-52.927C512.038,-56.306 491.92,-57.995 464.89,-57.995C463.662,-57.995 463.048,-59.838 463.048,-63.524C463.048,-67.21 463.662,-69.053 464.89,-69.053C482.705,-69.053 501.441,-68.592 521.099,-67.671C540.756,-66.749 561.335,-66.288 582.836,-66.288Z" fill="currentColor"/>
         </g>
     </g>
-</svg>
+  </svg>
   )
 }
+
+Logo.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.string,
+};
