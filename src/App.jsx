@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Location from "./pages/location/location";
 import Header from "./header";
 import { useEffect } from "react";
+import { ThemeProvider } from "./components/ThemeContext";
 
 function App() {
    useEffect(() => {
@@ -19,11 +20,9 @@ function App() {
       document.head.appendChild(link);
     };
 
-    // Initial set
     const darkModeMedia = window.matchMedia("(prefers-color-scheme: dark)");
     setFavicon(darkModeMedia.matches);
 
-    // Listen for changes
     darkModeMedia.addEventListener("change", (e) => {
       setFavicon(e.matches);
     });
@@ -31,11 +30,13 @@ function App() {
 
   return (
   <BrowserRouter>
+    <ThemeProvider>
   <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/location" element={<Location />} />
       </Routes>
+    </ThemeProvider>
     </BrowserRouter>
   );
 }

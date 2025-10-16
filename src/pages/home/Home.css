@@ -1,64 +1,85 @@
 html, body {
   margin: 0;
-  padding: 0;
-  height: 100%;
+  padding: 0vh 0vh;
+  height: 90vh;
   scroll-behavior: smooth;
 }
 
-.firstcontainer {
+.first, .second, .third, .forth {
   display: flex;              
   flex-direction: column;     
   justify-content: center;    
   align-items: center;      
-  height: 100vh;   
-  text-align: center;     
+  max-height: 90vh;   
+  text-align: center;   
+  width: 100%;  
+  padding: 0vh 0vh;
+  background-color: #323F2F;;
+  color: #EEE5D5;
+  text-align: center;
 }
 
-
-.secondcontainer {
+.fifth {
   display: flex;              
   flex-direction: column;     
   justify-content: center;    
   align-items: center;      
-  height: 100vh;   
-  text-align: center;     
-}
-
-
-.thirdcontainer {
-  display: flex;              
-  flex-direction: column;     
-  justify-content: center;    
-  align-items: center;      
-  height: 100vh;   
-  text-align: center;     
+  min-height: 90vh;   
+  text-align: center;   
+  width: 100%;  
+  padding: 0vh 0vh;
+  background-color: #EEE5D5;;
+  color: #323F2F;
+  text-align: center;
 }
 
 h1 {
   font-size: 3rem;
   font-weight: 100;
   margin-top: 0;
-  margin-bottom: 0  ;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 section {
   width: 100%;
-  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-/* Second section */
-.second {
-  background-color: #EEE5D5;;
-  color: #323F2F;
-  text-align: center;
-  padding: 4rem 2rem;
+.fade-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease-in, visibility 2s ease-in;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* or your preferred height */
 }
 
-.ourstory h2 {
-  font-weight: 300;
-  letter-spacing: 2px;
+.fade-section.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.fade-section.hidden {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

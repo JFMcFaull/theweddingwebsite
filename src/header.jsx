@@ -1,29 +1,11 @@
 import { Link } from "react-router-dom";
 import Logo from "./components/logo";
 import "./header.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useTheme } from "./components/ThemeContext"; // adjust path as needed
 
 export default function Header() {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const newTheme = entry.target.getAttribute("data-theme") || "light";
-            setTheme(newTheme);
-          }
-        });
-      },
-      { threshold: 0.8 } // triggers when 60% of section is visible
-    );
-
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
-  }, []);
+  const { theme } = useTheme();
 
   return (
     <header className={`header ${theme === "dark" ? "header-dark" : "header-light"}`}>

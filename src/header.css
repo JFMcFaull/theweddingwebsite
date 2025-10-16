@@ -4,41 +4,63 @@
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 12px 24px;
-  transition: color 0.9s ease, color 0.8s ease; /* 🔹 smooth color transition */
+  padding: 2vh 0vh;
+  transition: background-color 0.9s ease, color 0.8s ease; /* 🔹 smooth color transition */
+  max-height: 8vh;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
-.header-light {
-  color: #323F2F;
-}
-
-.header-dark {
-  color: #EEE5D5;
+.logo {
+  position: absolute; 
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 7.5vh;      /* scales on large screens */
+  min-height: 50px;    /* never smaller than 50px */
+  max-height: 80px;    /* never larger than 80px */
+  width: auto;
 }
 
 .nav-left ul,
 .nav-right ul {
+  top: 20%;
   list-style: none; 
-  margin: 0;         
-  padding: 0;        
-  display: flex;     
-  gap: 20px;        
+  display: flex;    
+  padding: 0; 
+  gap: 4rem;
 }
 
 .nav-left li,
 .nav-right li {
+  align-items: center;      /* center vertically */
   margin: 0;
-  padding: 0;
+  gap: 2rem;
 }
 
 .nav-left a,
 .nav-right a {
+  top: 20%;
   text-decoration: none;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   transition: color 0.3s ease;
+  display: inline-flex;     /* flex container to center text */
+  justify-content: center;  /* center text horizontally */
+  align-items: center;      /* center vertically */
+  width: 120px;             /* fixed width for all links */
+  text-align: center;  
+}
+
+
+.header-light[data-theme="light"] {
+  color: #323F2F;
+  background-color: #EEE5D5;
+}
+
+.header-dark[data-theme="dark"]{
+  color: #EEE5D5;
+  background-color: #323F2F;
 }
 
 .header-light a {
@@ -49,7 +71,19 @@
   color: #EEE5D5;
 }
 
-.logo {
-  height: 4rem;
-  width: auto;
+.nav-left a:hover,
+.nav-right a:hover {
+  color: grey;
+  text-underline-offset: 7px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .nav-left, .nav-right {
+    display: none; /* Hide nav links on small screens */
+  }
 }
