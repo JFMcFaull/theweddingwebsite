@@ -5,7 +5,11 @@ html, body {
   scroll-behavior: smooth;
 }
 
-.first, .second, .third, .forth {
+.firstcontainer{
+  color: #EEE5D5
+}
+
+.blank, .first, .second, .third  {
   display: flex;              
   flex-direction: column;     
   justify-content: center;    
@@ -19,19 +23,7 @@ html, body {
   text-align: center;
 }
 
-.fifth {
-  display: flex;              
-  flex-direction: column;     
-  justify-content: center;    
-  align-items: center;      
-  min-height: 90vh;   
-  text-align: center;   
-  width: 100%;  
-  padding: 0vh 0vh;
-  background-color: #EEE5D5;;
-  color: #323F2F;
-  text-align: center;
-}
+
 
 h1 {
   font-size: 3rem;
@@ -52,6 +44,10 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+p {
+  font-family: "Corinthia", cursive;
 }
 
 .fade-section {
@@ -82,4 +78,132 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.forth {
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;      
+  min-height: 90vh;   
+  text-align: center;   
+  padding: 0;
+  background-color: #EEE5D5;
+  color: #323F2F;
+  width: 100vw;
+  z-index: 1;
+}
+
+/* The parent container for the two halves */
+.lastContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 120%;
+  gap: 6vh;
+  flex-wrap: nowrap; /* keep side-by-side until 730px */
+  transition: all 0.3s ease;
+  /* overflow: clip; */
+}
+
+/* Left half (photo + lyrics) */
+.stackedContainer {
+  position: relative;
+  width: 40vh;
+  min-width: 200px;
+  max-width: 450px;
+  height: auto;
+}
+
+/* Polaroid photo */
+.UsPolaroid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+.song {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52.5%);
+  width: 120%;
+  font-size: clamp(1.4rem, 1.2vw, 1.5rem);
+  line-height: 1.4;
+  z-index: 1;
+}
+
+/* Right half (titles) */
+.lastTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30vw;
+  min-width: 250px;
+  max-width: 450px;
+}
+
+.lastTextContainer h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin: 0;
+}
+
+.lastTextContainer h2 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  margin: 0.5rem 0 0;
+  color: #323F2F;
+}
+
+/* Stacking layout under 730px */
+@media screen and (max-width: 775px) {
+  .lastContainer {
+    flex-direction: column;
+    gap: rem;  
+  }
+
+  .song {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ transform: translate(-50%, -52.5%);
+  width: 120%;
+  font-size: clamp(1.4rem, 1.2vw, 1.5rem);
+  line-height: 1.4;
+  z-index: 1;
+}
+
+.lastTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  min-width: 250px;
+  max-width: 450px;
+}
+
+.lastTextContainer h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin: 0;
+}
+
+.lastTextContainer h2 {
+  font-size: clamp(1.2rem, 1vw, 2rem);
+  margin: 0.5rem 0 0;
+  color: #323F2F;
+
+}
+
 }

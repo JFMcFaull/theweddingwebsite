@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
-import Location from "./pages/location/location";
+import Location from "./components/Location";
 import Header from "./header";
 import { useEffect } from "react";
 import { ThemeProvider } from "./components/ThemeContext";
+import Something from "./pages/something/something";
 
 function App() {
    useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/location" element={<Location />} />
+        <Route path="/something" element={<Something />} />
       </Routes>
     </ThemeProvider>
     </BrowserRouter>

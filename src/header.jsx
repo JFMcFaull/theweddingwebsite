@@ -12,7 +12,7 @@ export default function Header() {
       <nav className="nav-left">
         <ul>
           <li><Link to="/">OUR STORY</Link></li>
-          <li><Link to="/">SOMETHING</Link></li>
+          <li><Link to="/something">SOMETHING</Link></li>
         </ul>
       </nav>
 

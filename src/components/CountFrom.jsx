@@ -8,7 +8,8 @@ export default function CountFrom({ fromDate, className = '' }) {
       const now = new Date();
       const difference = now - new Date(fromDate);
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      setDaysPassed(days);
+      const accuntant = days.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      setDaysPassed(accuntant);
     }
 
     updateDays();

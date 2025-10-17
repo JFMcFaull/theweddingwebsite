@@ -17,8 +17,8 @@
   left: 50%;
   transform: translateX(-50%);
   height: 7.5vh;      /* scales on large screens */
-  min-height: 50px;    /* never smaller than 50px */
-  max-height: 80px;    /* never larger than 80px */
+  min-height: 7.5vh;    /* never smaller than 50px */
+  max-height: 7.5vh;    /* never larger than 80px */
   width: auto;
 }
 
@@ -82,7 +82,11 @@
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 775px) {
+
+  .logo {
+    padding: 0.6rem;
+  }
   .nav-left, .nav-right {
     display: none; /* Hide nav links on small screens */
   }
