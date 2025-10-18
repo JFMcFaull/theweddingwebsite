@@ -1,6 +1,14 @@
-// import React from 'react';
-// import './Location.css';
+import React from 'react';
+import './location.css';
 // import WerendaVideo from '../../assets/photos/Werenda.mp4';
+
+export default function Location() {
+  return (
+    <>
+    <p>hello, world.</p>
+    </>
+  );
+}
 
 // export default function Location() {
 //   return (

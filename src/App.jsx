@@ -1,11 +1,14 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Location from "./components/Location";
-import Header from "./header";
 import { useEffect } from "react";
-import { ThemeProvider } from "./components/ThemeContext";
-import Something from "./pages/something/something";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./components/themes/ThemeContext";
+import Header from "./components/header/header"
+import Home from "./pages/home/Home";
+import RVSP from "./pages/rvsp/RVSP"
+import OurStory from "./pages/ourstory/OurStory"
+import Itinerary from "./pages/itinerary/Itinerary"
+import Location from "./pages/location/Location"
+
 
 function App() {
    useEffect(() => {
@@ -35,8 +38,10 @@ function App() {
   <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/rvsp" element={<RVSP />} />
+        <Route path="/ourstory" element={<OurStory />} />
+        <Route path="/itinerary" element={<Itinerary />} />
         <Route path="/location" element={<Location />} />
-        <Route path="/something" element={<Something />} />
       </Routes>
     </ThemeProvider>
     </BrowserRouter>

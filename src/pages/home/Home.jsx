@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-import CountFrom from "../../components/CountFrom";
-import CountTo from "../../components/CountTo";
-import { useTheme } from "../../components/ThemeContext";
-import usPolaroid from "../../assets/photos/usPolaroid.jpg"
+import CountFrom from "../../components/countFrom/CountFrom";
+import CountTo from "../../components/countTo/CountTo";
+import { useTheme } from "../../components/themes/ThemeContext";
+import edinburgh from "../../assets/photos/edinburgh.jpg"
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -81,7 +81,7 @@ export default function Home() {
               <>
               <div className="lastContainer">
                 <div className="stackedContainer">
-                <img src={usPolaroid} alt="House image" className="UsPolaroid" />
+                <img src={edinburgh} alt="House image" className="edinburgh" />
                 <p className="song">I put my palms before her eyes and she told me my truth. Laid the road for me, a rich man's destiny but she saw it without you. She's a liar, she has no clue, you're the one thing I will not lose. I'll turn the tide, pull down the moon, run rivers dry, battle fate for you. Let's burn the pages, we'll start anew, right through the ages, to prove fate don't know you like I do. Like I do. I'm gonna make you feel my love, leave you no room for doubt. No other hope for me, you're my destiny. Won't go nowhere without you, you're my fire, that much is true. You're the one thing I will not lose. I'll turn the tide, pull down the moon, run rivers dry, battle fate for you. Let's burn the pages, we'll start anew, right through the ages, to prove fate don't know you like I do, oh-oh-oh. Like I do, Like I do. You're my fire, they have no clue, you're the one thing I will not lose. I will not lose. I'll turn the tide, pull down the moon, run rivers dry, battle fate for you. Let's burn the pages, we'll start anew, right through the ages, fate don't know you like I do. Oh-oh-oh-oh, know you like I do, fate don't know you like I do.</p>
                 </div>
                 <div className="lastTextContainer">

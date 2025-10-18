@@ -5,3 +5,7 @@
   align-items: center;
   color: white; /* text color over video */
 }
+
+.p {
+  color: red;
+}
